@@ -1,0 +1,35 @@
+// May need adjustment to suit your console size.
+
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+_textcolor(1);
+long long int b=0, e=0, f=20, y=39, col=0, xx=0;
+int a=0, d=0, p=0, x=60;
+ srand (time(NULL));
+	
+	while (y<=999) { //f=(((rand()))%20)+1; 
+		if (y<=1) {y=39;}
+
+xx=(rand()%120)+1;
+p=(rand()%3)+1;
+	a=(rand()%5)+1; 
+		d=(rand()%5000); 
+		if (d==5) {col=1;} if (d==12) {col=3;} if (d==17) {col=9;} if (d==23) {col=11;} if (d==61) {d=0;}
+_gotoxy(xx,y); y--; if (p==1) {x=x-2;}  if (p==0) {x=x;}  if (p==2) {x=x+2;} 
+if (x>=120 || x<=1) {x=60;}
+		_textcolor(col);
+if (a==1) {printf("%c", 176);}
+if (a==2) {printf("%c", 177);}
+if (a==3) {printf("%c", 178);}
+if (a==4) {printf("%c", 219);}
+if (a==5) {printf("%c", 32);}
+
+
+
+
+}
+return(0);}
